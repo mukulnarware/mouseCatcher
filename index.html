@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game page</title>
+
+    <style>
+        /* score-container */
+        #scorebox {
+            width: 300px;
+            height: 100px;
+            margin: auto;
+            padding: 26px 32px;
+            border: solid blue;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(227, 228, 227);
+            
+
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            border: solid rgb(240, 240, 240);
+            padding: 5px 23px;
+            justify-content: center;
+            background-color: rgb(227, 228, 227);
+            text-align: center;
+        }
+
+
+
+        .box {
+            width: 200px;
+            height: 200px;
+            /* border: solid red; */
+            margin: 15px;
+            position: relative;
+            background: url(dig.png) no-repeat center center/cover;
+            background-size: cover;
+            border-radius: 80px;
+        }
+
+       img {
+          
+          width: 200px;
+          height: 200px;
+         position: relative;
+          animation-duration: 1.5s;
+          animation-name: mouse;
+          cursor: pointer;
+          animation-iteration-count: infinite;
+
+          background-color: transparent;
+        }
+        @keyframes mouse {
+    0%   {top:-20px;}
+    /* 25%  {top:-50px;} */
+    50%  {top:-100px;}
+    /* 75%  {top:-70px;} */
+    100% {top:-40px;}
+  }
+  #result{
+      /* border: solid rebeccapurple; */
+      text-align: center;
+      padding: 23px 34px;
+      justify-content: center;
+      background-color: rgb(190, 170, 155);
+
+  }
+  #btn{
+      padding: 6px 14px;
+      color: rgb(238, 226, 226);
+      background-color: slategrey;
+      cursor: pointer;
+  }
+
+
+        
+        /* .box img{
+
+ } */
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="scorebox">
+        <p id="current-score"> Score:00</p>
+        <p id="time"></p>
+        <p id="highscore"></p>
+
+    </div>
+    <section id="container">
+        <div class="box" id="bax1">
+           
+        </div>
+
+        <div class="box" id="bax2">
+
+           
+
+
+        </div>
+        <div class="box" id="bax3">
+           
+        </div>
+        <div class="box" id="bax4">
+           
+        </div>
+        <div class="box" id="bax5">
+            
+        </div>
+        <div class="box" id="bax6">
+            
+
+        </div>
+        <div class="box" id="bax7">
+           
+        </div>
+        <div class="box" id="bax8">
+            
+        </div>
+        
+
+
+    </section>
+    <div id="result">
+        <input type="button" value="play again" id="btn" onclick="playAgain()" >
+        <p id="showScore" class="popUp"></p>
+        <p id="resultHScore" class=""></p>
+        
+    </div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
